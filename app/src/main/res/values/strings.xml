@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Number Guessing Game</string>
+    <string name="guess_the_number">Guess the number between 1 and 100</string>
+    <string name="number_guessing_game">Number Guessing Game</string>
+    <string name="too_low">Too low</string>
+    <string name="too_high">Too high</string>
+    <string name="number_guessed_correctly">Number guessed correctly in %d tries!</string>
+    <string name="tries_result">Try count %d!</string>
+    <string name="wrong_guess">Wrong guess</string>
+    <string name="empty">""</string>
+    <string name="victoria_vavulina">Victoria Vavulina</string>
+</resources>
