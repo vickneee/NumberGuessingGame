@@ -11,6 +11,7 @@ import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.MaterialTheme.shapes
 import androidx.compose.material3.MaterialTheme.typography
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -18,6 +19,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -36,9 +39,9 @@ fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
         Text(
             text = stringResource(R.string.app_name),
             style = typography.titleLarge,
+            fontWeight = FontWeight.Bold,
         )
 
-        // Show success message separately when the game is finished
         if (gameUiState.gameFinished) {
             Text(
                 text = stringResource(R.string.number_guessed_correctly, gameUiState.tryCount),
@@ -75,7 +78,7 @@ fun GameScreen(gameViewModel: GameViewModel = viewModel()) {
             Button(
                 modifier = Modifier.fillMaxWidth(),
                 onClick = { gameViewModel.checkGuess() },
-                enabled = !gameUiState.gameFinished // Disable the button when the game is finished
+                enabled = !gameUiState.gameFinished
             ) {
                 Text(
                     "Guess",
@@ -107,11 +110,21 @@ fun GameLayout(
 ) {
     OutlinedTextField(
         value = numberInput,
-        enabled = !gameFinished, // Disable the input field when the game is finished
+        enabled = !gameFinished,
         shape = shapes.large,
         modifier = Modifier.fillMaxWidth().padding(top = 20.dp, bottom = 10.dp, start = 20.dp, end = 20.dp),
         singleLine = true,
         onValueChange = onUserGuessChanged,
+        textStyle = TextStyle(
+            color = colorScheme.onSurface,
+            fontSize = 18.sp
+        ),
+        colors = OutlinedTextFieldDefaults.colors(
+            focusedTextColor = colorScheme.onSurface,
+            unfocusedTextColor = colorScheme.onSurface,
+            disabledTextColor = colorScheme.onSurface,
+            errorTextColor = colorScheme.onSurface,
+        ),
         label = {
             if (isGuessWrong && resultResId != R.string.empty) {
                 Text(stringResource(resultResId))
