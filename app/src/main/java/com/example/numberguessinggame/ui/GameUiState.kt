@@ -1,4 +1,6 @@
-package com.example.numberguessinggame
+package com.example.numberguessinggame.ui
+
+import com.example.numberguessinggame.R
 
 data class GameUiState(
     val secretNumber: Int = (1..100).random(),

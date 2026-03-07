@@ -5,9 +5,17 @@ Number Guessing Game – A simple game where the user tries to guess a randomly 
 #### Game Screens
 
 <p align="center">
-<img src="./res/Screenshot_20260306_024710.png" width="35%" alt="Android Mobile App Screen - Unscramble game screen"/><img src="./res/Screenshot_20260306_024546.png" width="35%" alt="Android Mobile App Screen - Unscramble game screen"/>
+<img src="./res/Screenshot_20260307_143848.png" width="35%" alt="Android Mobile App Screen - Guess number game screen"/><img src="./res/Screenshot_20260307_143905.png" width="35%" alt="Android Mobile App Screen - Guess number game screen"/>
 </p>
 
 <p align="center">
-<img src="./res/Screenshot_20260306_024636.png" width="35%" alt="Android Mobile App Screen - Unscramble game screen"/><img src="./res/Screenshot_20260306_024656.png" width="35%" alt="Android Mobile App Screen - Unscramble game screen"/>
+<img src="./res/Screenshot_20260307_143936.png" width="35%" alt="Android Mobile App Screen - Guess number game screen"/><img src="./res/Screenshot_20260307_143959.png" width="35%" alt="Android Mobile App Screen - Guess number game screen"/>
+</p>
+
+<p align="center">
+<img src="./res/Screenshot_20260307_144012.png" width="74%" alt="Android Mobile App Screen - Guess number game screen"/>
+</p>
+
+<p align="center">
+<img src="./res/Screenshot_20260307_144042.png" width="74%" alt="Android Mobile App Screen - Guess number game screen"/>
 </p>
